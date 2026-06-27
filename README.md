@@ -1,4 +1,4 @@
-\ Snake Game (Java + JavaFX)
+# Snake Game (Java + JavaFX)\ Snake Game (Java + JavaFX)
 
 
 
