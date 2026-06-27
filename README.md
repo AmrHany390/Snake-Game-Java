@@ -44,21 +44,20 @@ board.isGameOver();             // boolean
 
 ## 🚀 Running It
 
+### Option 1: Download the prebuilt game (easiest)
+
+Grab the latest `.rar` from the [Releases](../../releases) page, extract it, and run `SnakeGame.exe`. No installation needed — Java is bundled inside.
+
+> **Note:** Windows may show a blue "Windows protected your PC" SmartScreen warning when you run it. This happens because the app isn't digitally signed (that costs money and isn't worth it for a small project) — it doesn't mean anything is wrong. Click **"More info"** → **"Run anyway"**.
+
+### Option 2: Run from source
+
 Requires JDK 17+ and the JavaFX SDK.
 
 ```
 javac --module-path "path/to/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml -d out src/*.java
 java --module-path "path/to/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml -cp out Main
 ```
-
-## 🧠 What I Learned
-
-This was my first time designing a multi-class system from scratch rather than following a tutorial. Some of the more interesting problems I ran into on the backend:
-
-- **Defensive copying** — returning copies of mutable internal lists (`getBody()`, `getSnakeBody()`) so outside code can't corrupt internal state by mutating what's returned.
-- **Immutability** — making `Position` immutable (`final` fields, no setters) to avoid subtle aliasing bugs.
-- **Ordering bugs** — food-eating logic initially checked the *current* head position against food, which is always one tick too late. Solved with a `getNextHeadPosition()` "peek" method that computes the next position without mutating any state, so the correct `ateFood` flag can be determined *before* committing to a move.
-- **Retry loops** — food respawning uses a `do-while` loop to keep generating random positions until one isn't occupied by the snake.
 
 ## 📋 Possible Future Improvements
 
