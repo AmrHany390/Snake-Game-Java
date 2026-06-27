@@ -1,4 +1,4 @@
-\# Snake Game (Java + JavaFX)
+\ Snake Game (Java + JavaFX)
 
 
 
@@ -10,9 +10,9 @@ A classic Snake game built in Java, split cleanly between game logic and renderi
 
 
 
-\- \*\*Amr Hany\*\* (\[@your-github-handle](https://github.com/your-github-handle)) — Backend / game logic
+\- \*\*Amr Hany\*\* (\[@AmrHany390](https://github.com/AmrHany390)) — Backend / game logic
 
-\- \*\*Friend's Name\*\* (\[@friend-github-handle](https://github.com/friend-github-handle)) — Frontend / JavaFX UI
+\- \*\*Hassan Abdalla\*\* (\[@UpLightt](https://github.com/UpLightt)) — Frontend / JavaFX UI
 
 
 
